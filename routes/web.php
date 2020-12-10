@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layouts.sidebar_template.sidebar');
+    return view('layouts.sidebar_template.sidebar_example');
 });
 
 Auth::routes();

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Laravel</title>
+        <title>grobak</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -55,27 +55,36 @@
             margin-left: -15rem;
         }
         }
+        .sidebar-heading {
+            color: #033500;
+            font-weight: bold;
+        }
+
+        #menu-toggle {
+            cursor: pointer;
+        }
         </style>    
     </head>
     <body>
         <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
-        <div class="sidebar-heading">Therichpost </div>
+        <div class="sidebar-heading">grobak</div>
         <div class="list-group list-group-flush">
-            <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">Bahan Baku</a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">Resep</a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">Tentang Kami</a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">Keluar</a>
+            {{-- <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">Status</a> --}}
         </div>
         </div>
         <!-- /#sidebar-wrapper -->
         <!-- Page Content -->
         <div id="page-content-wrapper">
         <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-            <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+            <img src="{{asset('img/hamburger_menu_black.png')}}" width="30" height="30" id="menu-toggle" alt="hamburger-menu">
+            {{-- <a img class="btn btn-primary" id="menu-toggle">Toggle Menu</a> --}}
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
