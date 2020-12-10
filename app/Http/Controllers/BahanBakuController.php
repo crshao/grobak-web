@@ -14,7 +14,7 @@ class BahanBakuController extends Controller
      */
     public function index()
     {
-        //
+        return view('layouts.bahan_baku.index');
     }
 
     /**
