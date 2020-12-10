@@ -23,9 +23,12 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a href="{{ url('/') }}">
+                    <img src="{{asset('img/grobaklogo.png')}}" width="50" height="50"  alt="logo-grobak">
                 </a>
+                {{-- <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }}
+                </a> --}}
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -33,7 +36,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -75,6 +78,20 @@
         <main class="py-4">
             @yield('content')
         </main>
+    </div>
+    <div id="footer">
+        <h3 class='title'>
+            Social Media Icons
+            </h3>
+            <div class='widget-content'>
+            <ul>
+            <li><a href='https://www.instagram.com/'>instagram</a></li>
+            <li><a href='https://in.pinterest.com/'>pinterest</a></li>
+            <li><a href='https://www.youtube.com'>youtube</a></li>
+            <li><a href='https://twitter.com/'>twitter</a></li>
+            <li><a href='https://www.facebook.com/'>facebook</a></li>
+            </ul>
+            </div>
     </div>
 </body>
 </html>
