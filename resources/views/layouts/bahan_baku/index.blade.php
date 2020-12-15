@@ -17,34 +17,61 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
 </style>
 </head>
-<body>
+<body id="body">
 
 <h2>Tabel Bahan Baku</h2>
 
 <table>
   <tr>
-    <th>Nama Bahan Baku</th>
-    <th>Satuan</th>
-    <th>Harga</th>
-  </tr>
-  <tr>
-    <td>Kacang Tanah</td>
-    <td>Ons</td>
-    <td>Rp. 12.000.000</td>
-  </tr>
-  <tr>
-    <td>Bawang Putih</td>
-    <td>Ons</td>
-    <td>Rp. 20.000.000</td>
-  </tr>
-  <tr>
-    <td>Kacang Hijau</td>
-    <td>Ons</td>
-    <td>Rp.30.000.000</td>
+    <td>
+      Semua
+    </td>
+    <td>
+      Semua
+    </td>
+    <td>
+      Semua
+    </td>
+    <td>
+      Semua
+    </td>
   </tr>
 </table>
+
+<table id="contentTable"></table>
+
+<script>
+  document.getElementById("body").onload = function() {showBahanBaku()};
+
+  function showBahanBaku(){
+    document.getElementById("contentTable").innerHTML =
+      "<tr>" +
+        "<td>" +
+          "<a href=\"/home\">" +
+            "Nama Bahan Baku" +
+          "</a>" +
+        "</td>" +
+        "<td>" +
+          "<a href=\"/home\">" +
+            "Nama Bahan Baku" +
+          "</a>" +
+        "</td>" +
+        "<td>" +
+          "<a href=\"/home\">" +
+            "Nama Bahan Baku" +
+          "</a>" +
+        "</td>" +
+        "<td>" +
+          "<a href=\"/home\">" +
+            "Nama Bahan Baku" +
+          "</a>" +
+        "</td>" +
+      "</tr>";
+  }
+</script>
 
 </body>
 </html>
