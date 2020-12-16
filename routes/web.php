@@ -13,8 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.sidebar_template.sidebar_example');
+// Route::get('/', function () {
+//     return view('layouts.sidebar_template.sidebar_example');
+// });
+
+Route::get('/', function() {
+    return view('welcome');
 });
 
 Auth::routes();
