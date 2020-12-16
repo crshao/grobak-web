@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\BahanBaku;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BahanBakuController extends Controller
 {
@@ -14,7 +15,10 @@ class BahanBakuController extends Controller
      */
     public function index()
     {
-        return view('layouts.bahan_baku.index');
+        $count = DB::table('bahanbakus')->count();
+        $bahanBaku = DB::table('bahanbakus')->get();
+        
+        return view('layouts.bahan_baku.index', ['count' => $count, 'bahanBaku' => $bahanBaku]);
     }
 
     /**
