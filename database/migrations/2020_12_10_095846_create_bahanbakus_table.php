@@ -16,6 +16,10 @@ class CreateBahanbakusTable extends Migration
         Schema::create('bahanbakus', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name');
+            $table->string('description');
+            $table->string('price');
+            $table->string('jenis');
         });
     }
 
