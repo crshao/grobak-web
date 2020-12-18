@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 <style>
@@ -84,16 +84,16 @@ div{
 
 <script>
   var collection = [
-    @foreach ($bahanBaku as $barang)
-      "{{$barang->id}}",
+    @foreach ($bahanBakus as $bahanBaku)
+      "{{$bahanBaku->name}}",
     @endforeach
   ];
   
   var card_1 = document.getElementById("card-1"), card_2 = document.getElementById("card-2"),
     card_3 = document.getElementById("card-3"), card_4 = document.getElementById("card-4");
 
-  document.getElementById("body").onload = showBahanBaku(1);
-  document.getElementById("card-nav").onload = showCardNav();
+  // document.getElementById("body").onload = showBahanBaku(1);
+  // document.getElementById("card-nav").onload = showCardNav();
 
   function showBahanBaku(i){
     var index = (i-1) * 4;
@@ -141,4 +141,31 @@ div{
 </script>
 
 </body>
-</html>
+</html> -->
+
+@extends('layouts.app')
+
+@section('title')
+  Bahan Baku
+@endsection
+
+@section('content')
+  @foreach($bahanBakus->chunk(3) as $bahanBakuChunk)
+    <div class="row">
+      @foreach($bahanBakuChunk as $bahanBaku)
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            Gambar
+            <div class="caption">
+              <h3>{{$bahanBaku->nama_bahanbaku}}</h3>
+              <div class="clear-fix">
+                <div class="pull-left price">{{$bahanBaku->price}}</div>
+                <a href="{{ route('bahanBaku.addToCart', ['id' => $bahanBaku->id]) }}" class="btn btn-success pull-right" role="button">Tambah</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      @endforeach
+    </div>
+  @endforeach
+@endsection

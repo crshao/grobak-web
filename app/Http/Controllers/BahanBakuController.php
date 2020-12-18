@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\BahanBaku;
+use App\Cart;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Session;
 
 class BahanBakuController extends Controller
 {
@@ -15,10 +16,9 @@ class BahanBakuController extends Controller
      */
     public function index()
     {
-        $count = DB::table('bahanbakus')->count();
-        $bahanBaku = DB::table('bahanbakus')->get();
+        $bahanBakus = BahanBaku::all();
         
-        return view('layouts.bahan_baku.index', ['count' => $count, 'bahanBaku' => $bahanBaku]);
+        return view('layouts.bahan_baku.index', ['bahanBakus' => $bahanBakus]);
     }
 
     /**
@@ -85,5 +85,16 @@ class BahanBakuController extends Controller
     public function destroy(BahanBaku $bahanBaku)
     {
         //
+    }
+
+    public function getAddToCart(Request $request, $id){
+        $bahanBaku  = BahanBaku::find($id);
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->add($bahanBaku, $bahanBaku->id);
+
+        $request->session()->put('cart', $cart);
+        dd($request->session()->get('cart'));
+        return redirect()->route('layouts.bahan_baku.index');
     }
 }
