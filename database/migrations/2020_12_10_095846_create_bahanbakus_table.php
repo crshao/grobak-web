@@ -20,6 +20,7 @@ class CreateBahanbakusTable extends Migration
             $table->mediumText('description', 1000);
             $table->string('price');
             $table->string('jenis');
+            $table->binary('gambar');
         });
     }
 
