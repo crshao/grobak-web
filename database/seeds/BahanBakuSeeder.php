@@ -29,5 +29,14 @@ class BahanBakuSeeder extends Seeder
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
+
+        DB::table('bahanbakus')->insert([
+            'name' => "Ikan Gurami",
+            'description' => "Ikan gurami terutama digemari sebagai ikan konsumsi. Dagingnya padat, durinya besar-besar, rasanya enak dan gurih. Gurami hampir selalu tersedia di restoran, untuk dijadikan pelbagai macam masakan terutama gurami bakar dan gurami asam-manis. Ikan ini berharga cukup mahal. Gurami juga disukai sebagai ikan hias akuarium.",
+            'price' => "Rp. 55.000 / Kg",
+            'jenis' => "Seafood",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
     }
 }
