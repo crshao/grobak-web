@@ -76,7 +76,11 @@
             <a href="/bahanbaku" class="list-group-item list-group-item-action bg-light">Bahan Baku</a>
             <a href="#" class="list-group-item list-group-item-action bg-light">Resep</a>
             <a href="#" class="list-group-item list-group-item-action bg-light">Tentang Kami</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Keluar</a>
+            <a class="list-group-item list-group-item-action bg-light" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                Keluar
+            </a>
         </div>
         </div>
         <!-- /#sidebar-wrapper -->
