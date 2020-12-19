@@ -11,6 +11,5 @@ class ResepSeeder extends Seeder
      */
     public function run()
     {
-        //
     }
 }
