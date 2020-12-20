@@ -28,7 +28,7 @@ class BahanBakuController extends Controller
      */
     public function create()
     {
-        //
+        return view('bahanbaku.create');
     }
 
     /**
