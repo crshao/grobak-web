@@ -80,18 +80,18 @@
         </main>
     </div>
     <div id="footer">
-        <h3 class='title'>
-            Social Media Icons
-            </h3>
-            <div class='widget-content'>
-            <ul>
-            <li><a href='https://www.instagram.com/'>instagram</a></li>
-            <li><a href='https://in.pinterest.com/'>pinterest</a></li>
-            <li><a href='https://www.youtube.com'>youtube</a></li>
-            <li><a href='https://twitter.com/'>twitter</a></li>
-            <li><a href='https://www.facebook.com/'>facebook</a></li>
-            </ul>
-            </div>
+        <h3>Contact Us</h3>
+        <div class='widget-content'>
+            <a href='https://www.instagram.com/'>
+                <img src="{{ asset('img/instagram.png')}}" height="30" width="30" alt="logo-instagram"/>
+            </a>
+            <a href='https://twitter.com/'>
+                <img src="{{ asset('img/twitter.png')}}" height="30" width="30" alt="logo-twitter"/>
+            </a>
+            <a href='https://www.facebook.com/'>
+                <img src="{{ asset('img/facebook.png')}}" height="30" width="30" alt="logo-facebook"/>
+            </a>
+        </div>
     </div>
 </body>
 </html>

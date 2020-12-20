@@ -25,6 +25,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/bahanbaku', 'BahanBakuController@index');
+Route::get('/bahanbaku/create', 'BahanBakuController@create');
+Route::get('/bahanbaku/{bahanbaku}', 'BahanBakuController@show');
 
 Route::get('/add-to-cart/{id}', [
     'uses' => 'BahanBakuController@getAddToCart',

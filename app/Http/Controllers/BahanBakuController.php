@@ -18,7 +18,7 @@ class BahanBakuController extends Controller
     {
         $bahanBakus = BahanBaku::all();
         
-        return view('layouts.bahan_baku.index', ['bahanBakus' => $bahanBakus]);
+        return view('bahanbaku.index', ['bahanBakus' => $bahanBakus]);
     }
 
     /**

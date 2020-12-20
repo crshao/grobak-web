@@ -19,7 +19,7 @@ class CreateResepsTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('jenis');
-            $table->binary('gambar');
+            $table->string('gambar')->nullable();
         });
     }
 
