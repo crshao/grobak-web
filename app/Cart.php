@@ -24,9 +24,9 @@ class Cart
             }
         }
         $storedItem['quantity']++;
-        $storedItem['price'] = $item->price * $storedItem['quantity'];
+        $storedItem['price'] = (int)($item->price) * $storedItem['quantity'];
         $this->items[$id] = $storedItem;
         $this->totalQuantity++;
-        $this->totalPrice += $item->price ;
+        $this->totalPrice += (int)$item->price ;
     }
 }
