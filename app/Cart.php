@@ -17,16 +17,17 @@ class Cart
     }
 
     public function add($item, $id){
-        $storedItem = ['quantity' => 0, 'price' => $item->price, 'item' => $item];
+        $price = (int)($item->price);
+        $storedItem = ['quantity' => 0, 'price' => $price, 'item' => $item];
         if($this->items){
             if(array_key_exists($id, $this->items)){
                 $storedItem = $this->items[$id];
             }
         }
         $storedItem['quantity']++;
-        $storedItem['price'] = (int)($item->price) * $storedItem['quantity'];
+        $storedItem['price'] = ($price) * $storedItem['quantity'];
         $this->items[$id] = $storedItem;
         $this->totalQuantity++;
-        $this->totalPrice += (int)$item->price ;
+        $this->totalPrice += $price ;
     }
 }

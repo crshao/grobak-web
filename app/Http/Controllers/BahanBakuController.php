@@ -94,7 +94,15 @@ class BahanBakuController extends Controller
         $cart->add($bahanBaku, $bahanBaku->id);
 
         $request->session()->put('cart', $cart);
-        dd($request->session()->get('cart'));
-        return redirect()->route('layouts.bahan_baku.index');
+        return redirect()->route('bahanbaku');
+    }
+
+    public function getCart(){
+        if(!Session::has('cart')){
+            return view('bahanbaku.shopping-cart');
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('bahanbaku.shopping-cart', ['bahanBakus' => $cart->items, 'totalPrice' => $cart->totalPrice]);
     }
 }
