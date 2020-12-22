@@ -6,8 +6,8 @@
 
 @section('content')
     @if(Session::has('cart'))
-        <div class="row">
-            <div class="col-sm-6 col-md-6 sol-md-offset-3 sol-sm-offset-3">
+        <div class="row container">
+            <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
                 <ul class="list-group">
                     @foreach($bahanBakus as $bahanBaku)
                         <li class="list-group-item">
@@ -19,8 +19,8 @@
                                     Action <span class="caret">
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a href="#">Reduce by 1</a>
-                                                <a href="#">Reduce All</a>
+                                                <a class="btn btn-warning" href="#">Reduce by 1</a>
+                                                <a class="btn btn-danger" href="#">Reduce All</a>
                                             </li>
                                         </ul>
                                     </span>
@@ -31,20 +31,20 @@
                 </ul>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-6 col-md-6 sol-md-offset-3 sol-sm-offset-3">
+        <div class="row container">
+            <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
                 <strong>Total {{$totalPrice}}</strong>
             </div>
         </div>
         <br>
-        <div class="row">
-            <div class="col-sm-6 col-md-6 sol-md-offset-3 sol-sm-offset-3">
-                <button type="button" class="btn btn-success">Checkout</button>
+        <div class="row container">
+            <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+                <a href="{{ route('checkout')}}" type="button" class="btn btn-success">Checkout</a>
             </div>
         </div>
     @else
         <div class="row">
-            <div class="col-sm-6 col-md-6 sol-md-offset-3 sol-sm-offset-3">
+            <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
                 <h2>No Item</h2>
             </div>
         </div>

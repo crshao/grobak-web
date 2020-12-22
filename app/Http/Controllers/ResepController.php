@@ -14,7 +14,9 @@ class ResepController extends Controller
      */
     public function index()
     {
-        //
+        $reseps = Resep::all();
+        
+        return view('resep.index', ['reseps' => $reseps]);
     }
 
     /**

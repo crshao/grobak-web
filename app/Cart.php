@@ -17,7 +17,7 @@ class Cart
     }
 
     public function add($item, $id){
-        $price = (int)($item->price);
+        $price = intval($item->price);
         $storedItem = ['quantity' => 0, 'price' => $price, 'item' => $item];
         if($this->items){
             if(array_key_exists($id, $this->items)){

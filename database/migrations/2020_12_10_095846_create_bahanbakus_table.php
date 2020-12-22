@@ -18,7 +18,8 @@ class CreateBahanbakusTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->mediumText('description', 1000);
-            $table->string('price');
+            $table->string('pricetag');
+            $table->integer('price');
             $table->string('jenis');
             $table->string('gambar')->nullable();
         });

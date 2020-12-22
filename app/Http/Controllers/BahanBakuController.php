@@ -105,4 +105,14 @@ class BahanBakuController extends Controller
         $cart = new Cart($oldCart);
         return view('bahanbaku.shopping-cart', ['bahanBakus' => $cart->items, 'totalPrice' => $cart->totalPrice]);
     }
+
+    public function getCheckout(){
+        if(!Session::has('cart')){
+            return view('bahanbaku.shopping-cart');
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        $total = $cart->totalPrice;
+        return view('bahanbaku.checkout', ['total' => $total]);
+    }
 }
