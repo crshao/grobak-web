@@ -43,3 +43,8 @@ Route::get('/checkout', [
     'uses' => 'BahanBakuController@getCheckout',
     'as' => 'checkout'
 ]);
+
+Route::post('/checkout', [
+    'uses' => 'BahanBakuController@postCheckout',
+    'as' => 'checkout'
+]);

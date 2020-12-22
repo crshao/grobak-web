@@ -8,9 +8,58 @@
     <div class="row container">
         <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
             <h1>Checkout</h1>
-            <h4>Your Total: {{ $total }}</h4>
-            <form action="{{ route('checkout')}}" method="post">
-
+            <h4>Your Total: Rp. {{ $total }}</h4>
+            <form action="{{ route('checkout')}}" method="post" id="checkout-form">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="name">Nama</label>
+                            <input type="text" id="name" class="form-control" value="{{ Auth::user()->name }}" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="address">Alamat</label>
+                            <input type="text" id="address" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="card-name">Nama Pemegang Kartu</label>
+                            <input type="text" id="card-name" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="card-number">Nomor Kartu Kredit</label>
+                            <input type="text" id="card-number" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="card-expiry-month">Bulan Expired</label>
+                                    <input type="text" id="card-expiry-month" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="card-expiry-year">Tahun Expired</label>
+                                    <input type="text" id="card-expiry-year" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="card-cvc">CVC</label>
+                            <input type="text" id="card-cvc" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+                {{ csrf_field() }}
+                <button type="submit" class="btn btn-success">Buy</button>
             </form>
         </div>
     </div>
