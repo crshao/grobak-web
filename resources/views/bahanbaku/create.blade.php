@@ -2,9 +2,8 @@
 
 @section('content')
     <div class="container">
-        <form action="/p" enctype="multipart/form-data" method="post">
+        <form action="/bahanbaku" enctype="multipart/form-data" method="post">
             @csrf
-
             <div class="row">
                 <div class="col-8">
                     <div class="row">
@@ -26,18 +25,18 @@
                             </span>
                         @endif
 
-                        <label for="deskripsi" class="col-md-4 col-form-label">Deskripsi</label>
+                        <label for="description" class="col-md-4 col-form-label">Deskripsi</label>
 
-                        <input id="deskripsi"
+                        <input id="description"
                             type="text"
-                            class="form-control{{ $errors->has('deskripsi') ? ' is-invalid' : '' }}"
-                            name="deskripsi"
-                            value="{{ old('deskripsi') }}"
-                            autocomplete="deskripsi" autofocus>
+                            class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}"
+                            name="description"
+                            value="{{ old('description') }}"
+                            autocomplete="description" autofocus>
 
-                        @if ($errors->has('deskripsi'))
+                        @if ($errors->has('description'))
                             <span class="invalid-feedback" role="alert">
-                                <strong>{{ $errors->first('deskripsi') }}</strong>
+                                <strong>{{ $errors->first('description') }}</strong>
                             </span>
                         @endif
 
@@ -56,18 +55,18 @@
                             </span>
                         @endif
 
-                        <label for="harga" class="col-md-4 col-form-label">Harga</label>
+                        <label for="price" class="col-md-4 col-form-label">Harga</label>
 
-                        <input id="harga"
-                            type="text"
-                            class="form-control{{ $errors->has('harga') ? ' is-invalid' : '' }}"
-                            name="harga"
-                            value="{{ old('harga') }}"
-                            autocomplete="harga" autofocus>
+                        <input id="price"
+                            type="number"
+                            class="form-control{{ $errors->has('price') ? ' is-invalid' : '' }}"
+                            name="price"
+                            value="{{ old('price') }}"
+                            autocomplete="price" autofocus>
 
-                        @if ($errors->has('harga'))
+                        @if ($errors->has('price'))
                             <span class="invalid-feedback" role="alert">
-                                <strong>{{ $errors->first('harga') }}</strong>
+                                <strong>{{ $errors->first('price') }}</strong>
                             </span>
                         @endif
                     </div>

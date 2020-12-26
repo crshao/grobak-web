@@ -8,6 +8,8 @@ class BahanBaku extends Model
 {
     protected $table = 'bahanbakus';
 
+    protected $guarded = [];
+
     //Artinya 1 bahan baku dapat menjadi bagian
     //dari beberapa resep
     public function reseps()

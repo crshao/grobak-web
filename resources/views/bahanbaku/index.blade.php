@@ -10,7 +10,7 @@
       @foreach($bahanBakuChunk as $bahanBaku)
         <div class="col-sm-6 col-md-4">
           <div class="card">
-            <img class="card-img" src="https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/images/flex-pack.svg">
+            <img class="card-img" src="{{ $bahanBaku->gambar }}">
             <div class="figure-caption">
               <h3 class="card-title">{{$bahanBaku->name}}</h3>
               <div class="card-subtitle">

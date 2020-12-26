@@ -39,7 +39,27 @@ class BahanBakuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = request()->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'jenis' => 'required',
+            'price' => 'required',
+            'pricetag' => '',
+            'gambar' => 'required|image'
+        ]);
+
+        $imagePath = request('gambar')->store('uploads', 'public');
+
+        \App\BahanBaku::create([
+            'name' => $data['name'],
+            'description' => $data['description'],
+            'jenis' => $data['jenis'],
+            'price' => $data['price'],
+            'pricetag' => 'test',
+            'gambar' => 'storage/' . $imagePath,
+        ]);
+
+        return redirect('/bahanbaku/');
     }
 
     /**

@@ -24,10 +24,13 @@ Route::get('/', function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/bahanbaku', 'BahanBakuController@index')->name('bahanbaku');
 Route::get('/resep', 'ResepController@index')->name('resep');
+
+//Bahan Baku
+Route::get('/bahanbaku', 'BahanBakuController@index')->name('bahanbaku');
 Route::get('/bahanbaku/create', 'BahanBakuController@create');
 Route::get('/bahanbaku/{bahanbaku}', 'BahanBakuController@show');
+Route::post('/bahanbaku', 'BahanBakuController@store');
 
 Route::get('/add-to-cart/{id}', [
     'uses' => 'BahanBakuController@getAddToCart',
