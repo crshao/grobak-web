@@ -28,6 +28,7 @@ Route::get('/resep', 'ResepController@index')->name('resep');
 
 //Bahan Baku
 Route::get('/bahanbaku', 'BahanBakuController@index')->name('bahanbaku');
+Route::get('/bahanbaku/resep-{id}', 'BahanBakuController@getBahanBaku')->name('bahanbaku.get');
 Route::get('/bahanbaku/create', 'BahanBakuController@create');
 Route::get('/bahanbaku/{bahanbaku}', 'BahanBakuController@show');
 Route::post('/bahanbaku', 'BahanBakuController@store');
@@ -47,7 +48,7 @@ Route::get('/checkout', [
     'as' => 'checkout'
 ]);
 
-Route::post('/checkout', [
+Route::post('/postcheckout', [
     'uses' => 'BahanBakuController@postCheckout',
-    'as' => 'checkout'
+    'as' => 'postcheckout'
 ]);

@@ -14,7 +14,7 @@
             <div class="figure-caption">
               <h3 class="card-title">{{$resep->name}}</h3>
               <div class="card-subtitle">
-                <a href="{{ route('bahanBaku.addToCart', ['id' => $bahanBaku->id]) }}" class="btn btn-success" role="button">Lihat</a>
+                <a href="{{ route('bahanbaku.get', ['id' => $resep->id]) }}" class="btn btn-success" role="button">Lihat</a>
               </div>
             </div>
           </div>

@@ -6,8 +6,8 @@
 
 @section('content')
     @if(Session::has('cart'))
-        <div class="row container">
-            <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+        <div class="row container mw-100 d-flex justify-content-center">
+            <div class="col-sm-6 col-md-6">
                 <ul class="list-group">
                     @foreach($bahanBakus as $bahanBaku)
                         <li class="list-group-item">
@@ -15,36 +15,28 @@
                             <strong>{{ $bahanBaku['item']['name'] }}</strong>
                             <span class="label label-success">{{ $bahanBaku['price'] }}</span>
                             <div class="btn-group">
-                                <button class="btn btn-primary btn-xs dropdown-toogle" data-toggle="dropdown">
-                                    Action <span class="caret">
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a class="btn btn-warning" href="#">Reduce by 1</a>
-                                                <a class="btn btn-danger" href="#">Reduce All</a>
-                                            </li>
-                                        </ul>
-                                    </span>
-                                </button>
+                                <a class="btn btn-warning" href="#">Kurangi Satu</a>
+                                <a class="btn btn-danger" href="#">Batalkan</a>
                             </div>
                         </li>
                     @endforeach
                 </ul>
             </div>
         </div>
-        <div class="row container">
-            <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+        <div class="row container mw-100 justify-content-center">
+            <div class="col-sm-6 col-md-6">
                 <strong>Total {{$totalPrice}}</strong>
             </div>
         </div>
         <br>
-        <div class="row container">
-            <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+        <div class="row container mw-100 justify-content-center">
+            <div class="col-sm-6 col-md-6">
                 <a href="{{ route('checkout')}}" type="button" class="btn btn-success">Checkout</a>
             </div>
         </div>
     @else
-        <div class="row">
-            <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+        <div class="row mw-100 justify-content-center">
+            <div class="col-sm-6 col-md-6">
                 <h2>No Item</h2>
             </div>
         </div>

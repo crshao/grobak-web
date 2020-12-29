@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\BahanBaku;
 use App\Cart;
+use App\Need;
 use Illuminate\Http\Request;
 use Session;
 
@@ -17,6 +18,15 @@ class BahanBakuController extends Controller
     public function index()
     {
         $bahanBakus = BahanBaku::all();
+        
+        return view('bahanbaku.index', ['bahanBakus' => $bahanBakus]);
+    }
+
+    public function getBahanBaku($id)
+    {
+        // $bahanBakus = BahanBaku::all()->where('id', $id);
+        $id_bahanbaku = Need::where('id_resep', $id)->select('id_bahanbaku');
+        $bahanBakus = BahanBaku::whereIn('id', $id_bahanbaku)->get();
         
         return view('bahanbaku.index', ['bahanBakus' => $bahanBakus]);
     }
@@ -134,5 +144,9 @@ class BahanBakuController extends Controller
         $cart = new Cart($oldCart);
         $total = $cart->totalPrice;
         return view('bahanbaku.checkout', ['total' => $total]);
+    }
+
+    public function postCheckout(){
+        return view('bahanbaku.postcheckout');
     }
 }
