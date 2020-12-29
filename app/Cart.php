@@ -28,6 +28,23 @@ class Cart
         $storedItem['price'] = ($price) * $storedItem['quantity'];
         $this->items[$id] = $storedItem;
         $this->totalQuantity++;
-        $this->totalPrice += $price ;
+        $this->totalPrice += $price;
+    }
+
+    public function reduceByOne($id){
+        $this->items[$id]['quantity']--;
+        $this->items[$id]['price'] -= $this->items[$id]['item']['price'];
+        $this->totalQuantity--;
+        $this->totalPrice -= $this->items[$id]['item']['price'];
+
+        if($this->items[$id]['quantity'] <= 0){
+            unset($this->items[$id]);
+        }
+    }
+    
+    public function remove($id){
+        $this->totalQuantity -= $this->items[$id]['quantity'];
+        $this->totalPrice -= $this->items[$id]['price'];
+        unset($this->items[$id]);
     }
 }

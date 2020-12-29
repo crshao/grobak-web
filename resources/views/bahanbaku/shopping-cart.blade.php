@@ -15,8 +15,8 @@
                             <strong>{{ $bahanBaku['item']['name'] }}</strong>
                             <span class="label label-success">{{ $bahanBaku['price'] }}</span>
                             <div class="btn-group">
-                                <a class="btn btn-warning" href="#">Kurangi Satu</a>
-                                <a class="btn btn-danger" href="#">Batalkan</a>
+                                <a class="btn btn-warning" href="{{ route('bahanBaku.reduceByOne', [ 'id' => $bahanBaku['item']['id'] ]) }}">Kurangi Satu</a>
+                                <a class="btn btn-danger" href="{{ route('bahanBaku.remove', [ 'id' => $bahanBaku['item']['id'] ]) }}">Batalkan</a>
                             </div>
                         </li>
                     @endforeach
@@ -37,7 +37,7 @@
     @else
         <div class="row mw-100 justify-content-center">
             <div class="col-sm-6 col-md-6">
-                <h2>No Item</h2>
+                <h2>Anda belum memilih barang yang ingin dibeli!</h2>
             </div>
         </div>
     @endif

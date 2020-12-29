@@ -38,6 +38,16 @@ Route::get('/add-to-cart/{id}', [
     'as' => 'bahanBaku.addToCart'
 ]);
 
+Route::get('/reduce/{id}', [
+    'uses' => 'BahanBakuController@getReducedByOne',
+    'as' => 'bahanBaku.reduceByOne'
+]);
+
+Route::get('/remove/{id}', [
+    'uses' => 'BahanBakuController@getRemoveFromCart',
+    'as' => 'bahanBaku.remove'
+]);
+
 Route::get('/shopping-cart', [
     'uses' => 'BahanBakuController@getCart',
     'as' => 'bahanBaku.shoppingCart'
