@@ -54,7 +54,7 @@
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label for="card-cvc">CVC</label>
-                            <input type="text" id="card-cvc" class="form-control" required>
+                            <input type="password" id="card-cvc" class="form-control" required>
                         </div>
                     </div>
                 </div>

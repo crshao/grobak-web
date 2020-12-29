@@ -12,6 +12,6 @@
         <h3>Screenshot atau simpan laman ini sebagai bukti pembayaran</h3>
     </div>
     <div class="row container mw-100 justify-content-center">
-        <h6>Kode: xxx</h6>
+        <h6>Kode: SU012</h6>
     </div>
 @endsection

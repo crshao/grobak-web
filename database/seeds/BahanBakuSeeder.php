@@ -18,6 +18,7 @@ class BahanBakuSeeder extends Seeder
             'pricetag' => "Rp. 3.200 / Ons",
             'price' => 3200,
             'jenis' => "Rempah",
+            'gambar' => "storage/uploads/GdT4mOMCCzdmKbjSxYMbz1MAXdHoEFeEBXZuyQpA.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
@@ -28,6 +29,7 @@ class BahanBakuSeeder extends Seeder
             'pricetag' => "Rp. 2.500 / Ons",
             'price' => 2500,
             'jenis' => "Rempah",
+            'gambar' => "storage/uploads/LoEBPyaV6qeDjJJzr13Cnb6S3A8FidsLm9bGtwAw.jpeg",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
@@ -38,6 +40,51 @@ class BahanBakuSeeder extends Seeder
             'pricetag' => "Rp. 55.000 / Kg",
             'price' => 55000,
             'jenis' => "Seafood",
+            'gambar' => "storage/uploads/XFevPXbugsFB52qIAyPpzU6hmoViKSPh2SYD5NhM.jpeg",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+        DB::table('bahanbakus')->insert([
+            'name' => "Jeruk Nipis",
+            'description' => "Untuk kesehatan dan kecantikan.",
+            'pricetag' => "Rp. 5.000 / Ons",
+            'price' => 5000,
+            'jenis' => "Rempah",
+            'gambar' => "storage/uploads/bRgnJAOD6SA8YZaaOkuTdnkm0huXq8X0wuvMJ6e0.jpeg",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+        DB::table('bahanbakus')->insert([
+            'name' => "Bawang Bombai",
+            'description' => "Khasiat bawang bombai sangat banyak, yaitu antioksidan alami, mampu menekan efek sinogenik dari senyawa radikal bebas",
+            'pricetag' => "Rp. 20.000 / Ons",
+            'price' => 20000,
+            'jenis' => "Rempah",
+            'gambar' => "storage/uploads/WK1s1bETGR5xGnUaW3r7UKPj3Hyi6FVmPVp067Lo.jpeg",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+        DB::table('bahanbakus')->insert([
+            'name' => "Nanas",
+            'description' => "Nanas yang dibudidayakan orang sudah kehilangan kemampuan memperbanyak secara seksual, tetapi ia mengembangkan tanaman muda (bagian 'mahkota' buah) yang merupakan sarana perbanyakan secara vegetatif. nanas meningkatkan pencernaan dan mengurangi jerawat.",
+            'pricetag' => "Rp. 10.000 / Buah",
+            'price' => 10000,
+            'jenis' => "Buah",
+            'gambar' => "storage/uploads/4Nf9m4XvZNCp7tDpo6ixPt8eS6IzWFUSezEpi9lj.jpeg",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+        DB::table('bahanbakus')->insert([
+            'name' => "Paprika",
+            'description' => "Nanas yang dibudidayakan orang sudah kehilangan kemampuan memperbanyak secara seksual, tetapi ia mengembangkan tanaman muda (bagian 'mahkota' buah) yang merupakan sarana perbanyakan secara vegetatif. nanas meningkatkan pencernaan dan mengurangi jerawat.",
+            'pricetag' => "Rp. 50.000 / Kg",
+            'price' => 50000,
+            'jenis' => "Sayuran",
+            'gambar' => "storage/uploads/lDznCwCi569FqJPW2JfRGf4vwTEkO7xTscWvM3iD.jpeg",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
