@@ -75,7 +75,7 @@
         <div class="list-group list-group-flush">
             <a href="/bahanbaku" class="list-group-item list-group-item-action bg-light">Bahan Baku</a>
             <a href="/resep" class="list-group-item list-group-item-action bg-light">Resep</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Tentang Kami</a>
+            <a href="/aboutus" class="list-group-item list-group-item-action bg-light">Tentang Kami</a>
             <a class="list-group-item list-group-item-action bg-light" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
