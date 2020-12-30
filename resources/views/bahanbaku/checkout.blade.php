@@ -53,13 +53,13 @@
                     </div>
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <label for="card-cvc">CVC</label>
+                            <label for="card-cvc">CVV/CVC</label>
                             <input type="password" id="card-cvc" class="form-control" required>
                         </div>
                     </div>
                 </div>
                 {{ csrf_field() }}
-                <button type="submit" class="btn btn-success">Buy</button>
+                <button type="submit" class="btn btn-success">Konfirmasi Bayar</button>
             </form>
         </div>
     </div>
