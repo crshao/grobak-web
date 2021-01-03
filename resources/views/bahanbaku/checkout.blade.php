@@ -10,6 +10,7 @@
             <h1>Checkout</h1>
             <h4>Your Total: Rp. {{ $total }}</h4>
             <form action="{{ route('postcheckout')}}" method="post" id="checkout-form">
+            <input type="hidden" value="{{ Auth::user()->id}}" name="id_user">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="form-group">

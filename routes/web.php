@@ -62,6 +62,8 @@ Route::get('/checkout', [
 ]);
 
 Route::post('/postcheckout', [
-    'uses' => 'BahanBakuController@postCheckout',
+    'uses' => 'PesananController@store',
     'as' => 'postcheckout'
 ]);
+
+Route::get('/profile', 'PesananController@index')->name('profil');
