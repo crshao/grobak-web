@@ -66,4 +66,4 @@ Route::post('/postcheckout', [
     'as' => 'postcheckout'
 ]);
 
-Route::get('/profile', 'PesananController@index')->name('profil');
+Route::get('/profile', 'PesananController@index')->name('profile');
